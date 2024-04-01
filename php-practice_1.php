@@ -51,9 +51,9 @@ $city = [
   '茨城県' => '水戸市'
 ];
 
-foreach ($city as $y)
+foreach ($city as $urban)
 {
-  echo  "$y\n";
+  echo  "$urban\n";
 }
 
 // Q8 連想配列-2
@@ -68,10 +68,10 @@ $city = [
   '茨城県' => '水戸市'
 ];
 
-foreach ($city as $x => $y)
+foreach ($city as $prefecture => $urban)
 {
-  if ($x === '埼玉県' ){
-      echo $x . 'の県庁所在地は' . $y . 'です。';
+  if ($prefecture === '埼玉県' ){
+      echo $prefecture . 'の県庁所在地は' . $urban . 'です。';
   }
 }
 
@@ -89,15 +89,15 @@ $city = [
   '大阪府'=> '大阪市'
 ];
   
-foreach ($city as $x => $y)
+foreach ($city as $prefecture => $urban)
 {
   
-  if ($x == '東京都' || $x == '神奈川県' || $x == '千葉県' || $x == '埼玉県' || $x == '栃木県' || $x == '群馬県' || $x == '茨城県' )
+  if ($prefecture === '東京都' || $prefecture === '神奈川県' || $prefecture === '千葉県' || $prefecture === '埼玉県' || $prefecture === '栃木県' || $prefecture === '群馬県' || $prefecture === '茨城県' )
   {
-      echo $x . 'の県庁所在地は、' . $y . "です。\n";
+      echo $prefecture . 'の県庁所在地は、' . $urban . "です。\n";
   }
   else {
-      echo $x . "は関東地方ではありません。\n";
+      echo $prefecture . "は関東地方ではありません。\n";
   }
 }
 
@@ -115,36 +115,36 @@ hello('安藤');
 
 function calcTaxInPrice ($costPrice)
 {
-    $taxInPrice=$costPrice*1.1;
-    return $taxInPrice;
+    $calc=$costPrice*1.1;
+    return $calc ;
 }
 
 $price=1000;
 
-$calc=calcTaxInPrice ($price);
+$taxInPrice=calcTaxInPrice ($price);
 
-echo $price . '円の商品の税込価格は' . $calc . '円です。';
+echo $price . '円の商品の税込価格は' . $taxInPrice . '円です。';
 
 // Q12 関数とif文
 
 function distinguishNum($dummyNumber)
 {
     if ($dummyNumber %2 === 0){
-        return 'は偶数です。';
+        return "は偶数です。\n";
     } else
     {
-        return 'は奇数です。';
+        return "は奇数です。\n";
     }
 }
 
-$evenNumber=24; //evenNumber=偶数
 $oddNumber=11; //oddNumber=奇数
-    
-$integer=distinguishNum($evenNumber);
-$integer_2=distinguishNum($oddNumber);
+$evenNumber=24; //evenNumber=偶数
 
-echo $evenNumber. $integer . "\n";
-echo $oddNumber. $integer_2 . "\n";
+$integer=distinguishNum($oddNumber);
+$integer_2=distinguishNum($evenNumber);
+
+echo $oddNumber. $integer;
+echo $evenNumber. $integer_2;
 
 // Q13 関数とswitch文
 
