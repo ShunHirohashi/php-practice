@@ -52,4 +52,4 @@ $prev = new DateTime('2000-1-1');
 echo $prev->diff($now)->format('%a')
 ```
 
-- 「date」と入力し調べ、参考欄に「DateTimeInterface::format() 」をクリックすると戻り値の欄を確認すると調べられる。
+- 「date」と入力し調べ、参考欄に「DateTimeInterface::format() 」をクリックすると戻り値の欄を確認すると調べられる。「DateTimeInterface::format() 」これは指定した書式でフォーマット済みの日付文字列を返すから

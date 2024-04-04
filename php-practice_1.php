@@ -130,10 +130,10 @@ echo $price . '円の商品の税込価格は' . $taxInPrice . '円です。';
 function distinguishNum($dummyNumber)
 {
     if ($dummyNumber %2 === 0){
-        return "は偶数です。\n";
+        return $dummyNumber."は偶数です。\n";
     } else
     {
-        return "は奇数です。\n";
+        return $dummyNumber."は奇数です。\n";
     }
 }
 
@@ -143,8 +143,8 @@ $evenNumber=24; //evenNumber=偶数
 $integer=distinguishNum($oddNumber);
 $integer_2=distinguishNum($evenNumber);
 
-echo $oddNumber. $integer;
-echo $evenNumber. $integer_2;
+echo $integer;
+echo $integer_2;
 
 // Q13 関数とswitch文
 

@@ -33,8 +33,8 @@ $personalInfos = [
   ['name' => 'Cさん','mail' => 'ccc@mail.com','tel'  => '09055556666'],
 ];
 
-foreach ($personalInfos as $x => $y) {
-    echo $x+1 . '番目の' . $personalInfos[$x]['name'] . 'のメールアドレスは' . $personalInfos[$x]['mail'] .'で、' . $personalInfos[$x]['tel'] ."です。\n";
+foreach ($personalInfos as $SequentialOrder => $type) {   //$SequentialOrder=順番　　//$type=種類
+    echo $SequentialOrder+1 . '番目の' . $personalInfos[$SequentialOrder]['name'] . 'のメールアドレスは' . $personalInfos[$SequentialOrder]['mail'] .'で、' . $personalInfos[$SequentialOrder]['tel'] ."です。\n";
 }
 
 //問題３
@@ -46,8 +46,8 @@ $personalInfos = [
 
 $ageList = [25, 30, 18];
 
-foreach($ageList as $x => $y){
-    $personalInfos [$x] ['age'] = $y;
+foreach($ageList as $SequentialOrder => $type){
+    $personalInfos [$SequentialOrder] ['age'] = $type;
 }
 
 var_dump($personalInfos);
@@ -60,7 +60,7 @@ class Student
     public $studentId='120';
     public $studentName='山田';
 }
-       $pupil= new Student;  //pupil=生徒
+        $pupil= new Student;  //pupil=生徒
         echo '学籍番号' . $pupil->studentId . '番の生徒は' . $pupil->studentName . 'です。';
 
 // Q4 オブジェクト-2
