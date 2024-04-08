@@ -52,4 +52,7 @@ $prev = new DateTime('2000-1-1');
 echo $prev->diff($now)->format('%a')
 ```
 
-- 「date」と入力し調べ、参考欄に「DateTimeInterface::format() 」をクリックすると戻り値の欄を確認すると調べられる。「DateTimeInterface::format() 」これは指定した書式でフォーマット済みの日付文字列を返すから
+- DateTimeで調べDateTime クラスの定数は、 DateTimeInterface で定義されるようになった為、「DateTimeInterface」で検索。
+指定した書式でフォーマットした日付を返す為、「DateTimeInterface::format」を検索。この返し値がフォーマット済みの日付文字列を返す為、2行目の
+$prev = new DateTime('2000-1-1');
+の$prevに返される。なので3行目のformatメソッドの返り値は$prevになる。
