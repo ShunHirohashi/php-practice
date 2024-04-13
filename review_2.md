@@ -52,7 +52,5 @@ $prev = new DateTime('2000-1-1');
 echo $prev->diff($now)->format('%a')
 ```
 
-- DateTimeで調べDateTime クラスの定数は、 DateTimeInterface で定義されるようになった為、「DateTimeInterface」で検索。
-指定した書式でフォーマットした日付を返す為、「DateTimeInterface::format」を検索。この返し値がフォーマット済みの日付文字列を返す為、2行目の
-$prev = new DateTime('2000-1-1');
-の$prevに返される。なので3行目のformatメソッドの返り値は$prevになる。
+<!-- オブジェクト->メソッド・プロパティ -->
+- formatのメソッドが分からない為、「$prev->diff($now)」のオブジェクトから調べるが「diff($now)」のメソッドが分からない為、「$prev」のオブジェクトを調べると2行目にDateTimeと記載がある為、クラスはDateTimeになる。このように調べればformatメソッドの返り値が分かる

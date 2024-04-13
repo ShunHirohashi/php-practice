@@ -23,7 +23,7 @@ $personalInfos = [
   ['name' => 'Cさん','mail' => 'ccc@mail.com','tel'  => '09055556666'],
 ];
 
-echo $personalInfos[1]['name'] . 'の電話番号は' . $personalInfos[1]['tel'] .'です。';
+echo $personalInfos[1]['name'] . 'の電話番号は' . $personalInfos[1]['tel'] . 'です。';
 
 //問題２
 
@@ -33,7 +33,7 @@ $personalInfos = [
   ['name' => 'Cさん','mail' => 'ccc@mail.com','tel'  => '09055556666'],
 ];
 
-foreach ($personalInfos as $SequentialOrder => $type) {   //$SequentialOrder=順番　　//$type=種類
+foreach($personalInfos as $SequentialOrder => $type) {   //$SequentialOrder=順番　　//$type=種類
     echo $SequentialOrder+1 . '番目の' . $personalInfos[$SequentialOrder]['name'] . 'のメールアドレスは' . $personalInfos[$SequentialOrder]['mail'] .'で、' . $personalInfos[$SequentialOrder]['tel'] ."です。\n";
 }
 
@@ -57,10 +57,22 @@ var_dump($personalInfos);
 
 class Student
 {
-    public $studentId='120';
-    public $studentName='山田';
+    public $studentId;
+    public $studentName;
+
+    public function __construct($id, $name)
+    {
+        $this->studentId = $id;
+        $this->studentName = $name;
+    }
+
+    public function attend()
+    {
+        echo '授業に出席しました。';
+    }
 }
-        $pupil= new Student;  //pupil=生徒
+
+        $pupil= new Student(120,'山田');  //pupil=生徒
         echo '学籍番号' . $pupil->studentId . '番の生徒は' . $pupil->studentName . 'です。';
 
 // Q4 オブジェクト-2
@@ -78,7 +90,7 @@ class Student
 
     public function attend()
     {
-        $this->attend=('PHP');
+        $this->attend = ('PHP');
         echo $this->studentName . 'は' . $this->attend . 'の授業に参加しました。学籍番号：' . $this->studentId;
     }
 }

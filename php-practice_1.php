@@ -51,7 +51,7 @@ $city = [
   '茨城県' => '水戸市'
 ];
 
-foreach ($city as $urban)
+foreach($city as $urban)
 {
   echo  "$urban\n";
 }
@@ -68,9 +68,9 @@ $city = [
   '茨城県' => '水戸市'
 ];
 
-foreach ($city as $prefecture => $urban)
+foreach($city as $prefecture => $urban)
 {
-  if ($prefecture === '埼玉県' ){
+  if($prefecture === '埼玉県' ){
       echo $prefecture . 'の県庁所在地は' . $urban . 'です。';
   }
 }
@@ -89,39 +89,39 @@ $city = [
   '大阪府'=> '大阪市'
 ];
   
-foreach ($city as $prefecture => $urban)
+foreach($city as $prefecture => $urban)
 {
   
-  if ($prefecture === '東京都' || $prefecture === '神奈川県' || $prefecture === '千葉県' || $prefecture === '埼玉県' || $prefecture === '栃木県' || $prefecture === '群馬県' || $prefecture === '茨城県' )
+  if($prefecture === '東京都' || $prefecture === '神奈川県' || $prefecture === '千葉県' || $prefecture === '埼玉県' || $prefecture === '栃木県' || $prefecture === '群馬県' || $prefecture === '茨城県' )
   {
       echo $prefecture . 'の県庁所在地は、' . $urban . "です。\n";
   }
-  else {
+  else{
       echo $prefecture . "は関東地方ではありません。\n";
   }
 }
 
 // Q10 関数-1
 
-function hello ($name)
+function hello($name)
 {
-    echo $name . "さん、こんにちは。 \n" ;
+    return $name . "さん、こんにちは。 \n" ;
 }
 
-hello('金谷');
-hello('安藤');
+  echo hello('金谷');
+  echo hello('安藤');
 
 // Q11 関数-2
 
-function calcTaxInPrice ($costPrice)
+function calcTaxInPrice($costPrice)
 {
-    $calc=$costPrice*1.1;
+    $calc = $costPrice*1.1;
     return $calc ;
 }
 
-$price=1000;
+$price = 1000;
 
-$taxInPrice=calcTaxInPrice ($price);
+$taxInPrice = calcTaxInPrice($price);
 
 echo $price . '円の商品の税込価格は' . $taxInPrice . '円です。';
 
@@ -129,7 +129,7 @@ echo $price . '円の商品の税込価格は' . $taxInPrice . '円です。';
 
 function distinguishNum($dummyNumber)
 {
-    if ($dummyNumber %2 === 0){
+    if($dummyNumber %2 === 0){
         return $dummyNumber."は偶数です。\n";
     } else
     {
@@ -137,11 +137,11 @@ function distinguishNum($dummyNumber)
     }
 }
 
-$oddNumber=11; //oddNumber=奇数
-$evenNumber=24; //evenNumber=偶数
+$oddNumber = 11; //oddNumber=奇数
+$evenNumber = 24; //evenNumber=偶数
 
-$integer=distinguishNum($oddNumber);
-$integer_2=distinguishNum($evenNumber);
+$integer = distinguishNum($oddNumber);
+$integer_2 = distinguishNum($evenNumber);
 
 echo $integer;
 echo $integer_2;
@@ -169,8 +169,8 @@ function evaluateGrade($tentativeRuling){  //tentative ruling=仮決定
   }
 }
 
-$judgment=evaluateGrade('A');  //judgment =判定
-$judgment_2=evaluateGrade('E');
+$judgment = evaluateGrade('A');  //judgment =判定
+$judgment_2 = evaluateGrade('E');
 
 echo $judgment;
 echo $judgment_2;
