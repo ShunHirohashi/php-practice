@@ -47,10 +47,12 @@ public function __construct($id, $name)
 
 ## 下記コード3行目のformatメソッドの返り値をPHPのマニュアルから調べる手順を具体的に説明してください。
 ```
-$now = new DateTime();
+$now = new DateTime(空白);
 $prev = new DateTime('2000-1-1');
 echo $prev->diff($now)->format('%a')
 ```
 
 <!-- オブジェクト->メソッド・プロパティ -->
-- formatのメソッドが分からない為、「$prev->diff($now)」のオブジェクトから調べるが「diff($now)」のメソッドが分からない為、「$prev」のオブジェクトを調べると2行目にDateTimeと記載がある為、クラスはDateTimeになる。このように調べればformatメソッドの返り値が分かる
+-$prevに格納されているオブジェクトはDateTimeなのでDateTimeを開きます。
+DateTimeのdiffメソッドの返り値が$prevと$nowの差を返してる為、下にスクロールするとメソッド欄に「diff」がある為それを開いて返り値を調べます。
+DateIntervalオブジェクトに返すのでそれを開き下にスクロールするとメソッド欄に「format」がある為、それでformatメソッドの返り値が分かります。
