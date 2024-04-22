@@ -72,6 +72,7 @@ foreach($city as $prefecture => $urban)
 {
   if($prefecture === '埼玉県' ){
       echo $prefecture . 'の県庁所在地は' . $urban . 'です。';
+      break;
   }
 }
 
@@ -104,6 +105,7 @@ foreach($city as $prefecture => $urban)
 // Q10 関数-1
 
 function hello($name)
+
 {
     return $name . "さん、こんにちは。 \n" ;
 }

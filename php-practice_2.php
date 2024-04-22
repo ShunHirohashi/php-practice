@@ -72,6 +72,8 @@ class Student
     }
 }
 
+
+
         $pupil= new Student(120,'山田');  //pupil=生徒
         echo '学籍番号' . $pupil->studentId . '番の生徒は' . $pupil->studentName . 'です。';
 
